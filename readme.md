@@ -3,6 +3,7 @@ This is a docker-compose template for the TeamWin-TF2-Server
 
 ## Prerequisites
 
+* Linux or Docker-Desktop set to "linux mode".
 * Docker Engine and Docker-Compose.
 * A public facing docker network with the name `Public`.
 * Ports forwarded from router to the machine hosting the docker container. 
