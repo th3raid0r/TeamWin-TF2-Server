@@ -22,6 +22,6 @@ SRCDS_RCONPW=${SERVER_RCON_PASSWORD}
 
 ### More info:
 
-[Linux Dedicated Server from the TF2 Wiki](https://wiki.teamfortress.com/wiki/Linux_dedicated_server)
+[Linux Dedicated Server page from the TF2 Wiki](https://wiki.teamfortress.com/wiki/Linux_dedicated_server)
 
 [More information on the docker container](https://hub.docker.com/r/cm2network/tf2)
