@@ -3,8 +3,6 @@ services:
   tf2server:
     container_name: tf2-dedicated
     image: cm2network/tf2:latest
-    stdin_open: true
-    tty: true
     networks:
       - public
     volumes:
