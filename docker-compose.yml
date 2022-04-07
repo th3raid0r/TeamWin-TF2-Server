@@ -10,11 +10,6 @@ services:
     volumes:
       - tf2-data:/home/steam/tf-dedicated/
       - /etc/localtime:/etc/localtime:ro
-    secrets:
-      - rconpw
-      - pass
-      - token
-      - workshop-key
     env_file: .env
     environment:
       - SRCDS_PORT=27015
@@ -37,16 +32,6 @@ networks:
   public:
     external: true
     name: Public
-
-secrets:
-  rconpw: 
-    file: ./rconpw.secret
-  pass:
-    file: ./pass.secret
-  token:
-    file: ./token.secret
-  workshop-key:
-    file: ./workshop-key.secret
 
   
 
