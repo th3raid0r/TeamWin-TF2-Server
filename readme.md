@@ -1,6 +1,12 @@
 # TeamWin-TF2-Server
 This is a docker-compose template for the TeamWin-TF2-Server
 
+## Prerequisites
+
+* Docker Engine and Docker-Compose.
+* A public facing docker network with the name `Public`.
+* Ports forwarded from router to the machine hosting the docker container. 
+
 ## How to use:
 
 1. Get yourself a game server token from Steam [here](https://steamcommunity.com/dev/managegameservers).
