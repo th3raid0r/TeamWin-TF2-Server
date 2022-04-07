@@ -19,3 +19,8 @@ SRCDS_PW=${SERVER_PASSWORD}
 SRCDS_RCONPW=${SERVER_RCON_PASSWORD}
 ```
 4. Then run `docker-compose up -d`
+
+### More info:
+
+[Linux Dedicated Server from the TF2 Wiki](https://wiki.teamfortress.com/wiki/Linux_dedicated_server)
+[More information on the docker container](https://hub.docker.com/r/cm2network/tf2)
