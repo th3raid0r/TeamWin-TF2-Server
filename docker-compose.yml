@@ -1,6 +1,52 @@
 version: "3.9"
 services:
-  server:
+  tf2server:
+    container_name: tf2-dedicated
     image: cm2network/tf2:latest
+    stdin_open: true
+    tty: true
+    networks:
+      - public
+    volumes:
+      - tf2-data:/home/steam/tf-dedicated/
+      - /etc/localtime:/etc/localtime:ro
+    secrets:
+      - rconpw
+      - pass
+      - token
+      - workshop-key
+    env_file: .env
+    environment:
+      - SRCDS_PORT=27015
+      - SRCDS_TV_PORT=27020
+      - SRCDS_IP="0.0.0.0"
+      - SRCDS_FPSMAX=300
+      - SRCDS_TICKRATE=66
+      - SRCDS_MAXPLAYERS=40
+      - SRCDS_HOSTNAME="Team Win Revival Night 2022"
+      - SRCDS_WORKSHOP_START_MAP=0
+      - SRCDS_HOST_WORKSHOP_COLLECTION=0
+    ports:
+      - "27005-27025:27005-27025"
+      - "27005-27025:27005-27025/udp"
 
+volumes:
+  tf2-data:
+
+networks:
+  public:
+    external: true
+    name: Public
+
+secrets:
+  rconpw: 
+    file: ./rconpw.secret
+  pass:
+    file: ./pass.secret
+  token:
+    file: ./token.secret
+  workshop-key:
+    file: ./workshop-key.secret
+
+  
 
