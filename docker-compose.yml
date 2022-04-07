@@ -26,10 +26,21 @@ services:
 volumes:
   tf2-data:
 
+# Use this block if you already configured a network and update the name.
+#networks:
+#  public:
+#    external: true
+#    name: Public
+
+# Or keep this one if you have no idea what you are doing.
 networks:
   public:
-    external: true
     name: Public
-
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.enable_icc: false
+      com.docker.network.bridge.enable_ip_masquerade: true
+      com.docker.network.bridge.name: "DockerPublic"
+      com.docker.network.bridge.host_binding_ipv4: "0.0.0.0"
   
 
